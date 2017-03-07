@@ -31,45 +31,33 @@ class Data_content extends Component {
         const { datatextbox } = this.state;
         return (
 
-            <
-            div className = "container" >
-            <
-            div className = "row" >
-            <
-            div className = "col-md-5" >
-            <
-            div className = "box-name" >
-            <
-            form onSubmit = { this.onSubmit } >
-            <
-            TextFieldGroup field = "datatextbox"
-            label = "Notes"
-            rows = "3"
-            value = { datatextbox }
-            onChange = { this.onChange }
-            /> <
-            div className = "form-group" >
-            <
-            button className = "btn btn-success btn-md float-right btn-block" > Add Notes < /button> <
-            /div> <
-            div className = "clearfix" >
-
-            <
-            /div> <
-            /form> <
-            /div> <
-            /div> <
-            div className = "col-md-7" > {
-                this.state.data.map((data) => ( <
-                    ListNotes data = { data }
-                    />
-                ))
-            } <
-            /div> <
-            /div> <
-            /div>
-
-
+            <div className = "container" >
+                <div className = "row" >
+                    <div className = "col-md-5" >
+                        <div className = "box-name" >
+                        <form onSubmit = { this.onSubmit } >
+                        <TextFieldGroup field = "datatextbox"
+                        label = "Notes"
+                        rows = "3"
+                        value = { datatextbox }
+                        onChange = { this.onChange }
+                        /> 
+                        <div className = "form-group" >
+                            <button className = "btn btn-success btn-md float-right btn-block" > Add Notes < /button> 
+                        </div> 
+                        <div className = "clearfix" ></div> 
+                        </form> 
+                        </div> 
+                    </div> 
+                    <div className = "col-md-7" > 
+                        {this.state.data.map((data) => ( <
+                            ListNotes data = { data }
+                            />
+                        ))
+                    } 
+                    </div> 
+                </div> 
+            </div>
         );
     }
 }
