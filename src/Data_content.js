@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import TextFieldGroup from './common/TextArea.js';
+import TextArea from './common/TextArea.js';
+import TextFieldGroup from './common/TextFieldGroup.js';
 import ListNotes from './ListNotes.js';
 
 class Data_content extends Component {
@@ -7,10 +8,15 @@ class Data_content extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            datatitlebox: '',
             datatextbox: '',
             data: [
-                { notes: "Lorem Ipsum" },
-                { notes: "Pasti Bisa" }
+                { 
+                    title: "Lorem Donem",
+                    notes: "Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf. Ia tidak hanya bertahan selama 5 abad, tapi juga telah beralih ke penataan huruf elektronik, tanpa ada perubahan apapun. Ia mulai dipopulerkan pada tahun 1960 dengan diluncurkannya lembaran-lembaran Letraset yang menggunakan kalimat-kalimat dari Lorem Ipsum, dan seiring munculnya perangkat lunak Desktop Publishing seperti Aldus PageMaker juga memiliki versi Lorem Ipsum." },
+                { 
+                    title: "My notes",
+                    notes: "Pasti Bisa" }
             ]
         };
 
@@ -28,6 +34,7 @@ class Data_content extends Component {
     }
 
     render() {
+        const { datatitlebox } = this.state;
         const { datatextbox } = this.state;
         return (
 
@@ -36,14 +43,20 @@ class Data_content extends Component {
                     <div className = "col-md-5" >
                         <div className = "box-name" >
                         <form onSubmit = { this.onSubmit } >
-                        <TextFieldGroup field = "datatextbox"
+                        <TextFieldGroup
+                        field = "datatitlebox"
+                        label = "Title"
+                         />
+                        <TextArea 
+                        field = "datatextbox"
                         label = "Notes"
                         rows = "3"
                         value = { datatextbox }
                         onChange = { this.onChange }
                         /> 
                         <div className = "form-group" >
-                            <button className = "btn btn-success btn-md float-right btn-block" > Add Notes < /button> 
+                            <button className = "btn btn-success btn-md float-right btn-block" > Add Notes 
+                                </button> 
                         </div> 
                         <div className = "clearfix" ></div> 
                         </form> 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Data_content from './Data_content.js';
-
+import Loading from 'react-loading-bar'
+import 'react-loading-bar/dist/index.css'
 
 /* const Fauzi = () => <div>fauzi</div> */
 class Learn extends Component {
@@ -8,13 +9,29 @@ class Learn extends Component {
   constructor(props) {
     super(props);
 
-      this.state = {};
+      this.state = {
+        show: true
+      };
+  }
+
+  componentDidMount() {
+    
+    setTimeout(() => this.setState({ show: true }), 0); 
   }
 
   render() {
+    const { show } = this.state;
+    
+    if(show) {
+      setTimeout(() => this.setState({ show: false }), 0); 
+    }
+    
     return (
       <div>
-       
+       <Loading
+          show={this.state.show}
+          color="white"
+        />
       <div><Data_content data={this.state} /></div> 
       </div>
     );

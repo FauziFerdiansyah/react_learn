@@ -5,15 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <title>React App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   </head>
   <style>
+  html, 
+  body {
+      height: 100%;
+    }
   .body{
-    background:url(/assets/img/bgrn.jpg) no-repeat center center fixed;
+    /*background:url(/assets/img/bgrn.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover;*/
     background-size: cover;
-    padding-top: 50px
+    padding-top: 50px;
+    background-image: linear-gradient(20deg, #200036 0%, #042233 60%, #042233 100%);
+    background: #10172c;
+    background-image: -webkit-linear-gradient(70deg, #200036 0%, #042233 60%, #042233 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   .box-name {
     padding: 10px 15px;
@@ -25,12 +38,40 @@
     background: #FFF;
     margin-bottom: 10px;
   }
+  .title-box{
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 10px;
+    color: #777777;
+  }
+  
+  .card {
+      margin-bottom: 1.5rem;
+      border-radius: 0px
+  }
+  .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border: 1px solid #E3E8EC;
+  }
+  .card-accent-primary {
+      border-top-width: 2px;
+      border-top-color: #20a8d8;
+  }
+  .card-header {
+      padding: 0.75rem 1.25rem;
+      margin-bottom: 0;
+      background-color: #fff;
+      border-bottom: 1px solid #E3E8EC;
+  }
+  .card-block {
+      flex: 1 1 auto;
+      padding: 1.25rem;
+  }
   </style>
   <body class="body">
     <div id="root"></div>
   </body>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  
 </html>
